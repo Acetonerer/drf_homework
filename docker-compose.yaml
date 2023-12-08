@@ -9,10 +9,12 @@ services:
 
   db:
     image: postgres
-    env_file:
-      - ./.env
+    container_name:
+      postgres
     environment:
-      - DB_PASSWORD=tankist230101
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=tankist230101
+      - POSTGRES_DB=drf_27_2
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
       - pg_data:/var/lib/postgresql/data/pgdata

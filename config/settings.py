@@ -85,8 +85,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 
-#Database
-#https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+# Database
+# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
      'default': {
@@ -95,19 +95,9 @@ DATABASES = {
          'USER': os.getenv('DB_USER'),
          'PASSWORD': os.getenv('DB_PASSWORD'),
          'DB_HOST': os.getenv('DB_HOST'),
-    }
+         'DB_PORT': os.getenv('DB_PORT'),
+        }
 }
-
-#DATABASES = {
-    #'default': {
-        #'ENGINE': 'django.db.backends.postgresql',
-        #'NAME': 'dfr_27.2',
-        #'USER': 'postgres',
-        #'PASSWORD': 'tankist230101',
-        #'HOST': 'db'
-    #}
-#}
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
